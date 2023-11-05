@@ -7,9 +7,9 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/cjf/limo_ws/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH='/home/cjf/limo_ws/devel/lib:/opt/ros/melodic/lib:/usr/local/cuda-11.6/lib64'
-export PKG_CONFIG_PATH="/home/cjf/limo_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PWD='/home/cjf/limo_ws/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/cjf/limo_ws/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/cjf/limo_ws/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD='/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/cjf/limo_ws/src:/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src:$ROS_PACKAGE_PATH"

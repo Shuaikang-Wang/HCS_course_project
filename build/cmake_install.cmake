@@ -1,8 +1,8 @@
-# Install script for directory: /home/cjf/limo_ws/src
+# Install script for directory: /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/cjf/limo_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,95 +49,94 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cjf/limo_ws/install/_setup_util.py")
+   "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cjf/limo_ws/install" TYPE PROGRAM FILES "/home/cjf/limo_ws/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install" TYPE PROGRAM FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cjf/limo_ws/install/env.sh")
+   "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cjf/limo_ws/install" TYPE PROGRAM FILES "/home/cjf/limo_ws/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install" TYPE PROGRAM FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cjf/limo_ws/install/setup.bash;/home/cjf/limo_ws/install/local_setup.bash")
+   "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install/setup.bash;/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cjf/limo_ws/install" TYPE FILE FILES
-    "/home/cjf/limo_ws/build/catkin_generated/installspace/setup.bash"
-    "/home/cjf/limo_ws/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install" TYPE FILE FILES
+    "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/catkin_generated/installspace/setup.bash"
+    "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cjf/limo_ws/install/setup.sh;/home/cjf/limo_ws/install/local_setup.sh")
+   "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install/setup.sh;/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cjf/limo_ws/install" TYPE FILE FILES
-    "/home/cjf/limo_ws/build/catkin_generated/installspace/setup.sh"
-    "/home/cjf/limo_ws/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install" TYPE FILE FILES
+    "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/catkin_generated/installspace/setup.sh"
+    "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cjf/limo_ws/install/setup.zsh;/home/cjf/limo_ws/install/local_setup.zsh")
+   "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install/setup.zsh;/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cjf/limo_ws/install" TYPE FILE FILES
-    "/home/cjf/limo_ws/build/catkin_generated/installspace/setup.zsh"
-    "/home/cjf/limo_ws/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install" TYPE FILE FILES
+    "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/catkin_generated/installspace/setup.zsh"
+    "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cjf/limo_ws/install/.rosinstall")
+   "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cjf/limo_ws/install" TYPE FILE FILES "/home/cjf/limo_ws/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install" TYPE FILE FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/cjf/limo_ws/build/gtest/cmake_install.cmake")
-  include("/home/cjf/limo_ws/build/limo/limo_description/cmake_install.cmake")
-  include("/home/cjf/limo_ws/build/limo/teleop_twist_keyboard/cmake_install.cmake")
-  include("/home/cjf/limo_ws/build/mbot_navigation/cmake_install.cmake")
-  include("/home/cjf/limo_ws/build/mbot_recognition/cmake_install.cmake")
-  include("/home/cjf/limo_ws/build/mbot_slam/cmake_install.cmake")
-  include("/home/cjf/limo_ws/build/limo/limo_gazebo_sim/cmake_install.cmake")
-  include("/home/cjf/limo_ws/build/mbot_explore/cmake_install.cmake")
+  include("/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/gtest/cmake_install.cmake")
+  include("/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/limo/limo_description/cmake_install.cmake")
+  include("/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation/cmake_install.cmake")
+  include("/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_recognition/cmake_install.cmake")
+  include("/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_slam/cmake_install.cmake")
+  include("/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/limo/limo_gazebo_sim/cmake_install.cmake")
+  include("/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/cmake_install.cmake")
 
 endif()
 
@@ -149,5 +148,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/cjf/limo_ws/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/local_rrt_detector.dir/src/local_rrt_detector.cpp.o"
+  "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_explore/local_rrt_detector"
+  "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_explore/local_rrt_detector.pdb"
   "CMakeFiles/local_rrt_detector.dir/src/functions.cpp.o"
+  "CMakeFiles/local_rrt_detector.dir/src/local_rrt_detector.cpp.o"
   "CMakeFiles/local_rrt_detector.dir/src/mtrand.cpp.o"
-  "/home/cjf/limo_ws/devel/lib/mbot_explore/local_rrt_detector.pdb"
-  "/home/cjf/limo_ws/devel/lib/mbot_explore/local_rrt_detector"
 )
 
 # Per-language clean rules from dependency scanning.

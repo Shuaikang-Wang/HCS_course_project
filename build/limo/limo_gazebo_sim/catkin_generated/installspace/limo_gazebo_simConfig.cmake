@@ -67,14 +67,14 @@ set(limo_gazebo_sim_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(limo_gazebo_sim_SOURCE_PREFIX /home/cjf/limo_ws/src/limo/limo_gazebo_sim)
-  set(limo_gazebo_sim_DEVEL_PREFIX /home/cjf/limo_ws/devel)
+  set(limo_gazebo_sim_SOURCE_PREFIX /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/limo/limo_gazebo_sim)
+  set(limo_gazebo_sim_DEVEL_PREFIX /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel)
   set(limo_gazebo_sim_INSTALL_PREFIX "")
   set(limo_gazebo_sim_PREFIX ${limo_gazebo_sim_DEVEL_PREFIX})
 else()
   set(limo_gazebo_sim_SOURCE_PREFIX "")
   set(limo_gazebo_sim_DEVEL_PREFIX "")
-  set(limo_gazebo_sim_INSTALL_PREFIX /home/cjf/limo_ws/install)
+  set(limo_gazebo_sim_INSTALL_PREFIX /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install)
   set(limo_gazebo_sim_PREFIX ${limo_gazebo_sim_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/cjf/limo_ws/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install/lib;/home/weijinsheng/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(limo_gazebo_sim_LIBRARIES ${limo_gazebo_sim_LIBRARIES})
 
   _list_append_unique(limo_gazebo_sim_LIBRARY_DIRS ${${limo_gazebo_sim_dep}_LIBRARY_DIRS})
-  list(APPEND limo_gazebo_sim_EXPORTED_TARGETS ${${limo_gazebo_sim_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(limo_gazebo_sim_EXPORTED_TARGETS ${${limo_gazebo_sim_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

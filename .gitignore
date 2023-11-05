@@ -1,3 +1,14 @@
+# related to ros
+build/
+devel/
+logs/
+imgs/
+.catkin_tools/
+.vscode/
+.catkin_workspace
+.DS_Store
+
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

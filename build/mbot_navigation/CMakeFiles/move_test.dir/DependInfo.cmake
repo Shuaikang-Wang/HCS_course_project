@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/cjf/limo_ws/src/mbot_navigation/src/move_test.cpp" "/home/cjf/limo_ws/build/mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.o"
+  "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp" "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,8 +17,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/opt/ros/melodic/include"
-  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/opt/ros/noetic/include"
+  "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
 
 # Targets to which this target links.
