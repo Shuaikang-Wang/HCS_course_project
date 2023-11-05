@@ -137,6 +137,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_slam/cmake_install.cmake")
   include("/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/limo/limo_gazebo_sim/cmake_install.cmake")
   include("/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/cmake_install.cmake")
+  include("/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/planning/cmake_install.cmake")
 
 endif()
 
