@@ -1,8 +1,0 @@
-prefix=/home/bnw/Hybrid_control_system_HW/HCS_course_project/install
-
-Name: mbot_recognition
-Description: Description of mbot_recognition
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

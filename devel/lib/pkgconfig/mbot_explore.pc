@@ -1,8 +1,0 @@
-prefix=/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel
-
-Name: mbot_explore
-Description: Description of mbot_explore
-Version: 1.0.0
-Cflags: -I/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/include
-Libs: -L${prefix}/lib 
-Requires: message_runtime
