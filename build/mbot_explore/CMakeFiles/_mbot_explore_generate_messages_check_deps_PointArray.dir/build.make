@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src
+CMAKE_SOURCE_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build
+CMAKE_BINARY_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/build
 
 # Utility rule file for _mbot_explore_generate_messages_check_deps_PointArray.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project
 include mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.dir/progress.make
 
 mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py mbot_explore /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore/msg/PointArray.msg geometry_msgs/Point
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py mbot_explore /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore/msg/PointArray.msg geometry_msgs/Point
 
 _mbot_explore_generate_messages_check_deps_PointArray: mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray
 _mbot_explore_generate_messages_check_deps_PointArray: mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.dir/build.make
@@ -67,10 +67,10 @@ mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.di
 .PHONY : mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.dir/build
 
 mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.dir/clean:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore && $(CMAKE_COMMAND) -P CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.dir/cmake_clean.cmake
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore && $(CMAKE_COMMAND) -P CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.dir/cmake_clean.cmake
 .PHONY : mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.dir/clean
 
 mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.dir/depend:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bnw/Hybrid_control_system_HW/HCS_course_project/src /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore /home/bnw/Hybrid_control_system_HW/HCS_course_project/build /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : mbot_explore/CMakeFiles/_mbot_explore_generate_messages_check_deps_PointArray.dir/depend
 

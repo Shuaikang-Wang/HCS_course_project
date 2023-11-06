@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src
+CMAKE_SOURCE_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build
+CMAKE_BINARY_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/build
 
 # Utility rule file for actionlib_generate_messages_py.
 
@@ -63,10 +63,10 @@ mbot_navigation/CMakeFiles/actionlib_generate_messages_py.dir/build: actionlib_g
 .PHONY : mbot_navigation/CMakeFiles/actionlib_generate_messages_py.dir/build
 
 mbot_navigation/CMakeFiles/actionlib_generate_messages_py.dir/clean:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && $(CMAKE_COMMAND) -P CMakeFiles/actionlib_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && $(CMAKE_COMMAND) -P CMakeFiles/actionlib_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : mbot_navigation/CMakeFiles/actionlib_generate_messages_py.dir/clean
 
 mbot_navigation/CMakeFiles/actionlib_generate_messages_py.dir/depend:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation/CMakeFiles/actionlib_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bnw/Hybrid_control_system_HW/HCS_course_project/src /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation /home/bnw/Hybrid_control_system_HW/HCS_course_project/build /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation/CMakeFiles/actionlib_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : mbot_navigation/CMakeFiles/actionlib_generate_messages_py.dir/depend
 

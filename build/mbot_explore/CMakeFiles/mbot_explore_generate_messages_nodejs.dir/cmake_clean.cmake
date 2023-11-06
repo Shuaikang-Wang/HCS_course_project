@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/share/gennodejs/ros/mbot_explore/msg/PointArray.js"
+  "/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/share/gennodejs/ros/mbot_explore/msg/PointArray.js"
   "CMakeFiles/mbot_explore_generate_messages_nodejs"
 )
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore
+# Install script for directory: /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install")
+  set(CMAKE_INSTALL_PREFIX "/home/bnw/Hybrid_control_system_HW/HCS_course_project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,53 +38,53 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mbot_explore/msg" TYPE FILE FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore/msg/PointArray.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mbot_explore/msg" TYPE FILE FILES "/home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore/msg/PointArray.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mbot_explore/cmake" TYPE FILE FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/catkin_generated/installspace/mbot_explore-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mbot_explore/cmake" TYPE FILE FILES "/home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/catkin_generated/installspace/mbot_explore-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/include/mbot_explore")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/include/mbot_explore")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/share/roseus/ros/mbot_explore")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/share/roseus/ros/mbot_explore")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/share/common-lisp/ros/mbot_explore")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/share/common-lisp/ros/mbot_explore")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/share/gennodejs/ros/mbot_explore")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/share/gennodejs/ros/mbot_explore")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/python3/dist-packages/mbot_explore")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/python3/dist-packages/mbot_explore")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/python3/dist-packages/mbot_explore")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/python3/dist-packages/mbot_explore")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/catkin_generated/installspace/mbot_explore.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/catkin_generated/installspace/mbot_explore.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mbot_explore/cmake" TYPE FILE FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/catkin_generated/installspace/mbot_explore-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mbot_explore/cmake" TYPE FILE FILES "/home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/catkin_generated/installspace/mbot_explore-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mbot_explore/cmake" TYPE FILE FILES
-    "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/catkin_generated/installspace/mbot_exploreConfig.cmake"
-    "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/catkin_generated/installspace/mbot_exploreConfig-version.cmake"
+    "/home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/catkin_generated/installspace/mbot_exploreConfig.cmake"
+    "/home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/catkin_generated/installspace/mbot_exploreConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mbot_explore" TYPE FILE FILES "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mbot_explore" TYPE FILE FILES "/home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore/package.xml")
 endif()
 

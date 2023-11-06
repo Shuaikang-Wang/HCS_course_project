@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test"
-  "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test.pdb"
+  "/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test"
+  "/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test.pdb"
   "CMakeFiles/move_test.dir/src/move_test.cpp.o"
 )
 

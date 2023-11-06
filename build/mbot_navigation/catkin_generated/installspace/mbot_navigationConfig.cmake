@@ -67,14 +67,14 @@ set(mbot_navigation_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(mbot_navigation_SOURCE_PREFIX /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation)
-  set(mbot_navigation_DEVEL_PREFIX /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel)
+  set(mbot_navigation_SOURCE_PREFIX /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation)
+  set(mbot_navigation_DEVEL_PREFIX /home/bnw/Hybrid_control_system_HW/HCS_course_project/devel)
   set(mbot_navigation_INSTALL_PREFIX "")
   set(mbot_navigation_PREFIX ${mbot_navigation_DEVEL_PREFIX})
 else()
   set(mbot_navigation_SOURCE_PREFIX "")
   set(mbot_navigation_DEVEL_PREFIX "")
-  set(mbot_navigation_INSTALL_PREFIX /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install)
+  set(mbot_navigation_INSTALL_PREFIX /home/bnw/Hybrid_control_system_HW/HCS_course_project/install)
   set(mbot_navigation_PREFIX ${mbot_navigation_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install/lib;/home/weijinsheng/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/bnw/Hybrid_control_system_HW/HCS_course_project/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

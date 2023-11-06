@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp
 ros/ros.h
 -
 move_base_msgs/MoveBaseAction.h
@@ -878,6 +878,8 @@ ros/datatypes.h
 vector
 -
 map
+-
+memory
 -
 boost/array.hpp
 -

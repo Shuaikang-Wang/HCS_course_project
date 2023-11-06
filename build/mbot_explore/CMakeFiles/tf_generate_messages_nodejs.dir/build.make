@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src
+CMAKE_SOURCE_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build
+CMAKE_BINARY_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/build
 
 # Utility rule file for tf_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ mbot_explore/CMakeFiles/tf_generate_messages_nodejs.dir/build: tf_generate_messa
 .PHONY : mbot_explore/CMakeFiles/tf_generate_messages_nodejs.dir/build
 
 mbot_explore/CMakeFiles/tf_generate_messages_nodejs.dir/clean:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : mbot_explore/CMakeFiles/tf_generate_messages_nodejs.dir/clean
 
 mbot_explore/CMakeFiles/tf_generate_messages_nodejs.dir/depend:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/CMakeFiles/tf_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bnw/Hybrid_control_system_HW/HCS_course_project/src /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore /home/bnw/Hybrid_control_system_HW/HCS_course_project/build /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_explore/CMakeFiles/tf_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : mbot_explore/CMakeFiles/tf_generate_messages_nodejs.dir/depend
 

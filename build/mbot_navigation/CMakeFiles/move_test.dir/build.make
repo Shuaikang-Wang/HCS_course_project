@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src
+CMAKE_SOURCE_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build
+CMAKE_BINARY_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/build
 
 # Include any dependencies generated for this target.
 include mbot_navigation/CMakeFiles/move_test.dir/depend.make
@@ -58,17 +58,17 @@ include mbot_navigation/CMakeFiles/move_test.dir/progress.make
 include mbot_navigation/CMakeFiles/move_test.dir/flags.make
 
 mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.o: mbot_navigation/CMakeFiles/move_test.dir/flags.make
-mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.o: /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.o"
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/move_test.dir/src/move_test.cpp.o -c /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp
+mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.o: /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bnw/Hybrid_control_system_HW/HCS_course_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.o"
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/move_test.dir/src/move_test.cpp.o -c /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp
 
 mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/move_test.dir/src/move_test.cpp.i"
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp > CMakeFiles/move_test.dir/src/move_test.cpp.i
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp > CMakeFiles/move_test.dir/src/move_test.cpp.i
 
 mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/move_test.dir/src/move_test.cpp.s"
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp -o CMakeFiles/move_test.dir/src/move_test.cpp.s
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp -o CMakeFiles/move_test.dir/src/move_test.cpp.s
 
 # Object files for target move_test
 move_test_OBJECTS = \
@@ -77,40 +77,40 @@ move_test_OBJECTS = \
 # External object files for target move_test
 move_test_EXTERNAL_OBJECTS =
 
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.o
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: mbot_navigation/CMakeFiles/move_test.dir/build.make
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/libactionlib.so
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/libroscpp.so
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/librosconsole.so
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/librostime.so
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/libcpp_common.so
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: mbot_navigation/CMakeFiles/move_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test"
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/move_test.dir/link.txt --verbose=$(VERBOSE)
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.o
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: mbot_navigation/CMakeFiles/move_test.dir/build.make
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/libactionlib.so
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/libroscpp.so
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/librosconsole.so
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/librostime.so
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /opt/ros/noetic/lib/libcpp_common.so
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test: mbot_navigation/CMakeFiles/move_test.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bnw/Hybrid_control_system_HW/HCS_course_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test"
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/move_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-mbot_navigation/CMakeFiles/move_test.dir/build: /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test
+mbot_navigation/CMakeFiles/move_test.dir/build: /home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/lib/mbot_navigation/move_test
 
 .PHONY : mbot_navigation/CMakeFiles/move_test.dir/build
 
 mbot_navigation/CMakeFiles/move_test.dir/clean:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && $(CMAKE_COMMAND) -P CMakeFiles/move_test.dir/cmake_clean.cmake
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation && $(CMAKE_COMMAND) -P CMakeFiles/move_test.dir/cmake_clean.cmake
 .PHONY : mbot_navigation/CMakeFiles/move_test.dir/clean
 
 mbot_navigation/CMakeFiles/move_test.dir/depend:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation/CMakeFiles/move_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bnw/Hybrid_control_system_HW/HCS_course_project/src /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation /home/bnw/Hybrid_control_system_HW/HCS_course_project/build /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation/CMakeFiles/move_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : mbot_navigation/CMakeFiles/move_test.dir/depend
 

@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"mbot_explore\"
 
-CXX_INCLUDES = -I/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/devel/include -I/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/bnw/Hybrid_control_system_HW/HCS_course_project/devel/include -I/home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_explore/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

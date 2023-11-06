@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src
+CMAKE_SOURCE_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build
+CMAKE_BINARY_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/CMakeFiles /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_recognition/CMakeFiles/progress.marks
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_recognition/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/CMakeFiles 0
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/CMakeFiles /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_recognition/CMakeFiles/progress.marks
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_recognition/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_recognition/clean
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_recognition/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,17 +154,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_recognition/preinstall
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_recognition/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_recognition/preinstall
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_recognition/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -191,6 +191,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

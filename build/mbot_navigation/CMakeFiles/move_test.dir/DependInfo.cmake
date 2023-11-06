@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp" "/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.o"
+  "/home/bnw/Hybrid_control_system_HW/HCS_course_project/src/mbot_navigation/src/move_test.cpp" "/home/bnw/Hybrid_control_system_HW/HCS_course_project/build/mbot_navigation/CMakeFiles/move_test.dir/src/move_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

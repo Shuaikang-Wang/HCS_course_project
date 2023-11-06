@@ -1,4 +1,4 @@
-prefix=/home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/install
+prefix=/home/bnw/Hybrid_control_system_HW/HCS_course_project/install
 
 Name: mbot_recognition
 Description: Description of mbot_recognition

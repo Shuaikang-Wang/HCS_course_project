@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src
+CMAKE_SOURCE_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build
+CMAKE_BINARY_DIR = /home/bnw/Hybrid_control_system_HW/HCS_course_project/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ limo/limo_description/CMakeFiles/_catkin_empty_exported_target.dir/build: _catki
 .PHONY : limo/limo_description/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 limo/limo_description/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/limo/limo_description && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/limo/limo_description && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : limo/limo_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 limo/limo_description/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/src/limo/limo_description /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/limo/limo_description /home/weijinsheng/Hybrid_control_system_HW/HCS_course_project/build/limo/limo_description/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bnw/Hybrid_control_system_HW/HCS_course_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bnw/Hybrid_control_system_HW/HCS_course_project/src /home/bnw/Hybrid_control_system_HW/HCS_course_project/src/limo/limo_description /home/bnw/Hybrid_control_system_HW/HCS_course_project/build /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/limo/limo_description /home/bnw/Hybrid_control_system_HW/HCS_course_project/build/limo/limo_description/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : limo/limo_description/CMakeFiles/_catkin_empty_exported_target.dir/depend
 
