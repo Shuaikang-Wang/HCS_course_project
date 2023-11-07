@@ -1,0 +1,16 @@
+<launch>
+    <arg name="first_tb3_x_pos" value="1.0"/>
+    <arg name="first_tb3_y_pos" value="0.0"/>
+    <arg name="first_tb3_z_pos" value="0.0"/>
+    <arg name="first_tb3_yaw"   value="1.57"/>
+
+
+    <node pkg="move_base_goal" type="first_bot_goal_final" name="first_bot_goal_final">
+        <param name="first_tb3_x_pos" value="$(arg first_tb3_x_pos)"/>
+        <param name="first_tb3_y_pos" value="$(arg first_tb3_y_pos)"/>
+        <param name="first_tb3_z_pos" value="$(arg first_tb3_z_pos)"/>
+        <param name="first_tb3_yaw" value="$(arg first_tb3_yaw)"/>
+    </node>
+
+
+</launch>
