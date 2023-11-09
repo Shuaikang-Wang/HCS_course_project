@@ -30,8 +30,7 @@ def getfrontier(mapData):
 			elif data[i*w+j]==-1:
 				img[i,j]=205
 	
-	
-       	o=cv2.inRange(img,0,1)
+	o=cv2.inRange(img,0,1)
 	edges = cv2.Canny(img,0,255)
 	im2, contours, hierarchy = cv2.findContours(o,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 	cv2.drawContours(o, contours, -1, (255,255,255), 5)
@@ -66,5 +65,4 @@ def getfrontier(mapData):
 					all_pts=pt
 	
 	return all_pts
-
 

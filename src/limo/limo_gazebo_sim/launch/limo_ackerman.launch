@@ -2,7 +2,8 @@
 <launch>
 
     <arg name="robot_namespace" default="/"/>
-    <arg name="world_name" default="$(find limo_gazebo_sim)/worlds/maze_3_6x6.world"/>
+    <arg name="world_name" default="$(find limo_gazebo_sim)/worlds/new_world1.world"/>
+    <!-- <arg name="world_name" default="$(find limo_gazebo_sim)/worlds/cloister.world"/> -->
 
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="world_name" value="$(arg world_name)"/>
@@ -17,7 +18,7 @@
         robot_namespace:=$(arg robot_namespace)" />
 
     <!-- initial pose -->
-    <arg name="x" default="0.0"/>
+    <arg name="x" default="-7.0"/>
     <arg name="y" default="0.0"/>
     <arg name="z" default="0.0"/>
     <arg name="yaw" default="0.0"/>

@@ -32,6 +32,7 @@
   <param name="namespace" value=""/> 
   <param name="n_robots" value="1"/>
   <param name="rate" value="100"/>
+  <param name="robot_frame" value="base_footprint"/>
   </node>
   
   <node pkg="mbot_explore" type="assigner.py" name="assigner" output="screen">
@@ -43,10 +44,10 @@
   <param name="hysteresis_gain" value="2.0"/> 
   <param name="frontiers_topic" value="/filtered_points"/> 
   <param name="n_robots" value="1"/>
-  <param name="namespace" value="/
-  "/>
+  <param name="namespace" value=""/>
   <param name="delay_after_assignement" value="0.5"/>
   <param name="rate" value="100"/>
+  <param name="robot_frame" value="base_footprint"/>
   </node>
   
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find mbot_explore)/rviz/rrt.rviz">
