@@ -1,8 +1,8 @@
 <launch>
-    <arg name="first_tb3_x_pos" value="2.0"/>
-    <arg name="first_tb3_y_pos" value="-1.0"/>
+    <arg name="first_tb3_x_pos" value="0.1"/>
+    <arg name="first_tb3_y_pos" value="0.0"/>
     <arg name="first_tb3_z_pos" value="0.0"/>
-    <arg name="first_tb3_yaw"   value="1.57"/>
+    <arg name="first_tb3_yaw"   value="0.0"/>
 
 
     <node pkg="move_base_goal" type="first_bot_goal_final" name="first_bot_goal_final">
