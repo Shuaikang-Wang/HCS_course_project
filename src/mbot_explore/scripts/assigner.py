@@ -88,8 +88,8 @@ def node():
     for i in range(0, len(robot_namelist)):
         robots.append(robot(name=robot_namelist[i]))
 
-    for i in range(0, len(robot_namelist)):
-        robots[i].sendGoal(robots[i].getPosition())
+    # for i in range(0, len(robot_namelist)):
+    #     robots[i].sendGoal(robots[i].getPosition())
     # -------------------------------------------------------------------------
     # ---------------------     Main   Loop     -------------------------------
     # -------------------------------------------------------------------------
@@ -159,7 +159,7 @@ def node():
         # -------------------------------------------------------------------------
         if (len(id_record) > 0):
             winner_id = revenue_record.index(max(revenue_record))
-            robots[id_record[winner_id]].sendGoal(centroid_record[winner_id])
+            # robots[id_record[winner_id]].sendGoal(centroid_record[winner_id])
             frontier_pub(centroid_record[winner_id])
             # print("centroid_record[winner_id]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ",centroid_record[winner_id])
             rospy.loginfo(robot_namelist[id_record[winner_id]] + "  assigned to  " + str(centroid_record[winner_id]))

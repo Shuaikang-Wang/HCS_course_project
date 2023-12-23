@@ -31,45 +31,7 @@ class image_converter:
       self.tf_buffer = tf2_ros.Buffer()
       self.tf_listener = tf2_ros.TransformListener(self.tf_buffer)
 
-
-    # object position dict:
-      self.object_position={}
-    def update_object_position(self,point_world):
-        x,y= point_world.point.x,point_world.point.y
-        # get the path of current sricpts
-        import os
-        path=os.path.abspath(os.path.dirname(__file__))
-        # open a txt to record the position
-        print("-------------------------------------------------")
-        print(path+"/object_position.txt")
-        print("-------------------------------------------------")
-        f = open(path+"/object_position.txt","a")
-        Is_Recorded_Before=False
-        # check if the object has been recorded
-        for obj_key in self.object_position.keys():
-            old_position=self.object_position[obj_key]
-            if abs(x-old_position[0])<0.2 and abs(y-old_position[1])<0.2:
-                new_position=np.array(old_position)*0.8+np.array([x,y])*0.2
-                new_position=new_position.tolist()
-                self.object_position[obj_key]=new_position
-                Is_Recorded_Before=True
-                break
-        if Is_Recorded_Before==False:
-            if np.isnan(x)==False and np.isnan(y)==False:
-                object_num=len(list(self.object_position.keys()))
-                self.object_position[object_num+1]=[x,y]   
-        # get current time
-        import time
-        time_now=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        f.write("--------------------------------------\n")
-        f.write("Time:"+str(time_now))
-        f.write("\n")     
-        for obj_key in self.object_position.keys():
-            x,y=self.object_position[obj_key]
-            f.write("object index:"+str(obj_key)+":\t x:"+str(x)+"\t y:"+str(y)+"\n")
-        # f.write(str(x)+","+str(y)+"\n")
-        f.write("--------------------------------------\n")
-        f.close()
+     
     def visual_callback(self,data):
         # 使用cv_bridge将ROS的图像数据转换成OpenCV的图像格式
         try:
@@ -132,14 +94,7 @@ class image_converter:
 
             # 使用tf2将点从相机坐标系转换到世界坐标系
             point_world = self.tf_buffer.transform(point_camera,"odom")
-            # rospy.loginfo("Robot detecting: target position "+str(point_world))
-            self.update_object_position(point_world)
-            # 发布目标位置
-            object_num=len(list(self.object_position.keys()))
-            if object_num>0:
-                point_world.point.x=self.object_position[object_num][0]
-                point_world.point.y=self.object_position[object_num][1]
-                point_world.header.seq=object_num
+            # rospy.loginfo("Robot detecting: target position "+str(point_world)
             self.target_pub.publish(point_world)
 
         # 显示Opencv格式的图像

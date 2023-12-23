@@ -22,6 +22,14 @@ ros::Publisher cmd_pub;
 
 int status_flag = STATUS_EXPLORING;
 
+void rescue_point_pub(move_base_msgs::MoveBaseGoal goal)
+{
+	ros::NodeHandle nh;
+	ros::Publisher goal_point_publisher = nh.advertise<move_base_msgs::MoveBaseGoal>("rescue_point",10);
+	move_base_msgs::MoveBaseGoal msg = goal;
+	goal_point_publisher.publish(msg);
+}
+
 // 接收到订阅的消息后，会进入消息回调函数
 void poseCallback(const geometry_msgs::PointStamped::ConstPtr& msg)
 {
@@ -68,6 +76,7 @@ void poseCallback(const geometry_msgs::PointStamped::ConstPtr& msg)
 
 
 		act.sendGoal(goal);
+		rescue_point_pub(goal);
 		ROS_INFO("Going to target: x:%0.6f, y:%0.6f, z:%0.6f", msg->point.x, msg->point.y, msg->point.z);
 		act.waitForResult();
 
@@ -75,12 +84,6 @@ void poseCallback(const geometry_msgs::PointStamped::ConstPtr& msg)
 	}
 }
 
-void goal_point_pub(move_base_msgs::MoveBaseGoal goal)
-{
-	// ros::Publisher goal_point_publisher = nh.advertise<std_msgs::String>("chatter",10);
-
-
-}
 
 
 int main(int argc, char **argv)

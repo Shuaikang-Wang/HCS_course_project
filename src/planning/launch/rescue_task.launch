@@ -1,0 +1,6 @@
+<launch>
+     <include file="$(find limo_gazebo_sim)/launch/limo_four_diff.launch"/>
+     <include file="$(find mbot_explore)/launch/single_robot.launch"/>
+     <include file="$(find mbot_recognition)/launch/find_target.launch"/>
+
+</launch>
