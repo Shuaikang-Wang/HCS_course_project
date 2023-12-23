@@ -4,7 +4,7 @@ from sensor_msgs.msg import LaserScan
 #!/usr/bin/env python3
 import rospy
 from std_msgs.msg import String
-print(f"Entering vie!!!!!!!!!!!!!!!!!!!!!!1")
+print(f"Entering my_planning!!!!!!!!!!!!!!!!!!!!!!1")
 import sys
 
 import numpy as np

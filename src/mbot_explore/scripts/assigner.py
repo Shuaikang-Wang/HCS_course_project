@@ -8,6 +8,8 @@ from geometry_msgs.msg import Point
 from nav_msgs.msg import OccupancyGrid
 import tf
 from mbot_explore.msg import PointArray
+from geometry_msgs.msg import PointStamped
+
 from time import time
 from numpy import array
 from numpy import linalg as LA
@@ -34,8 +36,22 @@ def mapCallBack(data):
     mapData = data
 
 
-# Node----------------------------------------------
+def frontier_pub(point):
+    frontier_publisher = rospy.Publisher("frontier_point",PointStamped)
+    x1 = point[0]
+    y1 = point[1]
+    point = PointStamped()
+    point.header.frame_id = "base_footprint"
+    point.header.stamp = rospy.Time.now()
+    point.point.x = x1
+    point.point.y = y1
+    point.point.z = 0.0
 
+    frontier_publisher.publish(point)
+
+
+
+# Node----------------------------------------------
 def node():
     global frontiers, mapData, globalmaps
     rospy.init_node('assigner', anonymous=False)
@@ -47,7 +63,7 @@ def node():
     info_multiplier = rospy.get_param('~info_multiplier', 3.0)
     hysteresis_radius = rospy.get_param('~hysteresis_radius', 3.0)  # at least as much as the laser scanner range
     hysteresis_gain = rospy.get_param('~hysteresis_gain',
-                                      2.0)  # bigger than 1 (biase robot to continue exploring current region
+                                      10.0)  # bigger than 1 (biase robot to continue exploring current region
     frontiers_topic = rospy.get_param('~frontiers_topic', '/filtered_points')
     delay_after_assignement = rospy.get_param('~delay_after_assignement', 0.5)
     rateHz = rospy.get_param('~rate', 100)
@@ -144,6 +160,8 @@ def node():
         if (len(id_record) > 0):
             winner_id = revenue_record.index(max(revenue_record))
             robots[id_record[winner_id]].sendGoal(centroid_record[winner_id])
+            frontier_pub(centroid_record[winner_id])
+            # print("centroid_record[winner_id]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ",centroid_record[winner_id])
             rospy.loginfo(robot_namelist[id_record[winner_id]] + "  assigned to  " + str(centroid_record[winner_id]))
             rospy.sleep(delay_after_assignement)
         # -------------------------------------------------------------------------

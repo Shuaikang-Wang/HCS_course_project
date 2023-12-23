@@ -65,6 +65,8 @@ void poseCallback(const geometry_msgs::PointStamped::ConstPtr& msg)
 		goal.target_pose.pose.position.z = msg->point.z;
 		goal.target_pose.pose.orientation.w = 1;
 
+
+
 		act.sendGoal(goal);
 		ROS_INFO("Going to target: x:%0.6f, y:%0.6f, z:%0.6f", msg->point.x, msg->point.y, msg->point.z);
 		act.waitForResult();
@@ -72,6 +74,14 @@ void poseCallback(const geometry_msgs::PointStamped::ConstPtr& msg)
 		status_flag==STATUS_EXPLORING;
 	}
 }
+
+void goal_point_pub(move_base_msgs::MoveBaseGoal goal)
+{
+	ros::Publisher goal_point_publisher = nh.advertise<std_msgs::String>("chatter",10);
+
+
+}
+
 
 int main(int argc, char **argv)
 {

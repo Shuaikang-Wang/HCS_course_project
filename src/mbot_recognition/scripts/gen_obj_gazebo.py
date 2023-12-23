@@ -8,6 +8,7 @@ import time
 from std_srvs.srv import Empty
 from std_msgs.msg import Int32
 from geometry_msgs.msg import Pose, PointStamped
+from nav_msgs.msg import Odometry
 import argparse
 
 goal_model_1_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'worlds', 'Target_1',
@@ -37,12 +38,14 @@ position = []
 
 
 def callback(msg):
-    x, y = msg.point.x, msg.point.y
+    # x, y = msg.point.x, msg.point.y
+    x, y = msg.pose.pose.position.x, msg.pose.pose.position.y
+    # print("xxxxxxxxxxxxxxxxxxxxxxxxxx,yyyyyyyyyyyyyyyyyy",x,y)
     global position
     position.clear()
     position.append(x)
     position.append(y)
-    rospy.loginfo("The position of this robot is " + str(position))
+    # rospy.loginfo("The position of this robot is " + str(position))
 
 
 class Env():
@@ -54,12 +57,14 @@ class Env():
         self.del_model = rospy.ServiceProxy('/gazebo/delete_model', DeleteModel)
         self.N_obj = N
         self.obj_pos_list = obj_pos_list
-        rospy.Subscriber('robot_position', PointStamped, callback)
+        # rospy.Subscriber('robot_position', PointStamped, callback)
+        rospy.Subscriber('odom', Odometry, callback)
         self.flag_publisher = rospy.Publisher('flag', Int32, queue_size=10)
         # self.delete_num = 0
         self.delete_list = []
 
         time.sleep(1.0)
+
 
     def build_env(self):
 
@@ -82,7 +87,7 @@ class Env():
         #             break
         # except (rospy.ServiceException) as e:
         #     print("gazebo/delete_model service call failed")
-        #
+        
         # time.sleep(0.1)
 
         # BUILD THE TARGETS
@@ -107,26 +112,30 @@ class Env():
         self.unpause_proxy()
 
     def Distance(self, point):
-        L = 0.4 ** 2
+        L = 0.6 ** 2
         for i in range(self.N_obj):
+            print("distance to obj "+str(i)+"    !+!========================     ",((self.obj_pos_list[i][0] - point[0]) ** 2 + (self.obj_pos_list[i][1] - point[1]) ** 2)**0.5)
             if i in self.delete_list:
                 pass
-            elif (self.obj_pos_list[i][0] - point[0]) ** 2 + (self.obj_pos_list[i][0] - point[0]) ** 2 < L:
+            elif (self.obj_pos_list[i][0] - point[0]) ** 2 + (self.obj_pos_list[i][1] - point[1]) ** 2 < L:
                 return i
         return -1
 
     def dynamically_delete(self):
         while not rospy.is_shutdown():
             global position
+            print("position!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",position)
             if len(position) == 0:
                 pass
             else:
                 delete_index = self.Distance(position)
+                print("de2222222222222222222222222222222222222222222222222222222      ",delete_index)
                 if delete_index == -1:
                     pass
                 else:
                     self.pause_proxy()
                     self.del_model(f"target_{delete_index + 1}")
+                    print("111111111111111111111111111111111111111111!!")
                     # del self.obj_pos_list[delete_index]
                     # self.N_obj = self.N_obj - 1
                     # self.delete_num = self.delete_num + 1
@@ -156,3 +165,4 @@ if __name__ == "__main__":
     env.build_env()
 
     env.dynamically_delete()
+    
