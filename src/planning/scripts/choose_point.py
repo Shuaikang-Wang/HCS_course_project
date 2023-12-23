@@ -72,7 +72,6 @@ class Choose_Point():
     def update_object_position(self,point_world):
         x,y,z= point_world.point.x,point_world.point.y,point_world.point.z
         
-        
         Is_Recorded_Before=False
         # check if the object has been recorded
         for obj_key in self.object_position.keys():
@@ -104,6 +103,7 @@ class Choose_Point():
         self.frontier_sub_msg = msg
         point =[self.frontier_sub_msg.point.x,self.frontier_sub_msg.point.x,self.frontier_sub_msg.point.z]
         # open a txt to record the position
+        import time
         f = open(self.path+"/frontier_points.txt","a")
         f.write("--------------------------------------\n")
         f.write("Time:"+str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
@@ -153,13 +153,13 @@ class Choose_Point():
             distance_to_rescue = np.linalg.norm(np.array(robot.robot_pose)-np.array(rescue_position))
             if distance_to_rescue < RESCUE_THRESHOLD:
                 del self.object_position[min_key]
-                self.flag = 1
+                self.If_Arrived_Frontier = True
                 
         if self.frontier_goal != []:
             distance_to_frontier = np.linalg.norm(np.array(robot.robot_pose)-np.array(self.frontier_goal[0]))
             if distance_to_frontier < FRONTIER_THRESHOLD:
                 del self.frontier_goal[0]
-                self.flag = 1
+                self.If_Arrived_Frontier = True
         
         if len(self.object_position) != 0:
             min_key=min(list(self.object_position.keys()))
