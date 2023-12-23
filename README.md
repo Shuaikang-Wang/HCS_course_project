@@ -319,3 +319,14 @@
 - 联系我们
   
   请联系Dr.Chen通过以下邮箱：chenjunfeng@stu.pku.edu.cn
+  
+  
+  
+  
+  
+## 自主建图启动方式
+ 1. roslaunch limo_gazebo_sim limo_four_diff.launch
+ 
+ 2. roslaunch mbot_explore single_robot.launch
+ 
+ 
