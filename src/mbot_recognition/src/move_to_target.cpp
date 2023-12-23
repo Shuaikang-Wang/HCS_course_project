@@ -77,7 +77,7 @@ void poseCallback(const geometry_msgs::PointStamped::ConstPtr& msg)
 
 void goal_point_pub(move_base_msgs::MoveBaseGoal goal)
 {
-	ros::Publisher goal_point_publisher = nh.advertise<std_msgs::String>("chatter",10);
+	// ros::Publisher goal_point_publisher = nh.advertise<std_msgs::String>("chatter",10);
 
 
 }
