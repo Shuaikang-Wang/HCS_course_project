@@ -28,8 +28,12 @@ import rospy
 import actionlib
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 
+import os 
+import sys
+import time
+
 RESCUE_THRESHOLD = 0.3
-FRONTIER_THRESHOLD = 0.2
+FRONTIER_THRESHOLD = 0.8
 
 
 class GETPOSE():
@@ -45,23 +49,30 @@ class Choose_Point():
         self.rescue_sub_msg = None
         self.frontier_sub_msg = None
 
-        self.flag = 1
-
+        #self.flag = 1
+        self.If_Arrived_Frontier=True
+        self.last_frontier_goal_update_time=0
         self.rescue_list = []
         self.frontier_goal = []
         # object position dict:
         self.object_position={}
+        import sys
+        self.path=sys.path[0]
+        # clear the recording file
+        f = open(self.path+"/object_positions_dict.txt","w")
+        f.close()
+        f = open(self.path+"/target_object_position.txt","w")
+        f.close()
+        f = open(self.path+"/frontier_points.txt","w")
+        f.close()
+        f = open(self.path+"/target_frontier_position.txt","w")
+        f.close()
+
 
     def update_object_position(self,point_world):
         x,y,z= point_world.point.x,point_world.point.y,point_world.point.z
-        # get the path of current sricpts
-        import os
-        path=os.path.abspath(os.path.dirname(__file__))
-        # open a txt to record the position
-        print("-------------------------------------------------")
-        print(path+"/object_position.txt")
-        print("-------------------------------------------------")
-        f = open(path+"/object_position.txt","a")
+        
+        
         Is_Recorded_Before=False
         # check if the object has been recorded
         for obj_key in self.object_position.keys():
@@ -76,11 +87,11 @@ class Choose_Point():
             if np.isnan(x)==False and np.isnan(y)==False:
                 object_num=len(list(self.object_position.keys()))
                 self.object_position[object_num+1]=[x,y,z]   
-        # get current time
         import time
-        time_now=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        # open a txt to record the position
+        f = open(self.path+"/object_positions_dict.txt","a")
         f.write("--------------------------------------\n")
-        f.write("Time:"+str(time_now))
+        f.write("Time:"+str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
         f.write("\n")     
         for obj_key in self.object_position.keys():
             x,y,z=self.object_position[obj_key]
@@ -92,27 +103,35 @@ class Choose_Point():
     def frontier_callback(self,msg):
         self.frontier_sub_msg = msg
         point =[self.frontier_sub_msg.point.x,self.frontier_sub_msg.point.x,self.frontier_sub_msg.point.z]
-        wrong_point = np.array([2.0,2.0])
-        if np.linalg.norm(wrong_point-np.array(point[:2]))>0.1:
-            self.frontier_goal = point
-        import os
-        import sys
-        path=os.path.abspath(os.path.dirname(__file__))
-        # path=sys.path[0]
         # open a txt to record the position
-        f = open(path+"/best_frontier_points.txt","w")
-        # get current time
-        import time
-        time_now=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        f = open(self.path+"/frontier_points.txt","a")
         f.write("--------------------------------------\n")
-        f.write("Time:"+str(time_now))
+        f.write("Time:"+str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
         f.write("\n")     
         f.write(f"best_frontier_points: x: {point[0]},y: {point[1]},z: {point[2]},\n")
         # f.write(str(x)+","+str(y)+"\n")
         f.write("--------------------------------------\n")
         f.close()
-     
 
+        wrong_point = np.array([2.0,2.0])
+        
+        if np.linalg.norm(wrong_point-np.array(point[:2]))>0.1:
+            import time
+            # only update the frontier goal when the robot has arrived the previous frontier goal or the time is over 20s
+            if self.If_Arrived_Frontier==True or time.time()-self.last_frontier_goal_update_time>20:
+                self.frontier_goal = point
+                self.If_Arrived_Frontier=False
+                self.last_frontier_goal_update_time=time.time()
+                f = open(self.path+"/target_frontier_position.txt","a")
+                import time
+                time_now=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+                f.write("--------------------------------------\n")
+                f.write("Time:"+str(time_now)+"\n")
+                f.write(f"goal frontier point: {point[0]},{point[1]}\n")
+                f.write("--------------------------------------\n")
+                f.close()
+                
+        
     def rescue_callback(self, msg):
         self.rescue_sub_msg = msg
         self.update_object_position(self.rescue_sub_msg)
@@ -124,16 +143,13 @@ class Choose_Point():
         '''
         Function: choose which point to go 
         '''
-        rescue_position = [0,0,0]
-
-        #判断位姿 与 rescue_point 和frontier_point的距离，决定是否删除rescue_point点以及，选用下一个
-        if len(self.object_position) !=0:
-            min_key=min(list(self.object_position.keys()))
-            rescue_position=self.object_position[min_key]
 
         robot = GETPOSE()
         # robot.robot_pose
+        #判断位姿 与 rescue_point 和frontier_point的距离，决定是否删除rescue_point点以及，选用下一个
         if len(self.object_position) != 0:
+            min_key=min(list(self.object_position.keys()))
+            rescue_position=self.object_position[min_key]
             distance_to_rescue = np.linalg.norm(np.array(robot.robot_pose)-np.array(rescue_position))
             if distance_to_rescue < RESCUE_THRESHOLD:
                 del self.object_position[min_key]
@@ -158,29 +174,24 @@ class Choose_Point():
             # 初始化四个目标点在 map 坐标系下的坐标,数据来源于《采集的目标点.docx》
             goal0.target_pose.pose.position.x = point[0]
             goal0.target_pose.pose.position.y = point[1]
-            # goal0.target_pose.pose.orientation.z = 0
-            # goal0.target_pose.pose.orientation.w = 1
+            goal0.target_pose.pose.orientation.z = 0.15
+            goal0.target_pose.pose.orientation.w = 1
 
             goal0.target_pose.header.frame_id = "map"
             goal0.target_pose.header.stamp = rospy.Time.now()
-            import os
-            import sys
-            #path=os.path.abspath(os.path.dirname(__file__))
-            path=sys.path[0]
-            # open a txt to record the position
-            f = open(path+"/object_position.txt","w")
-            # get current time
             import time
-            time_now=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            # open a txt to record the position
+            f = open(self.path+"/target_object_position.txt","a")
             f.write("--------------------------------------\n")
-            f.write("Time:"+str(time_now))
+            f.write("Time:"+str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
             f.write("\n")     
             f.write(f"target object position: x: {goal0.target_pose.pose.position.x} y: {goal0.target_pose.pose.position.y} \n")
-            # f.write(str(x)+","+str(y)+"\n")
             f.write("--------------------------------------\n")
             f.close()
+
             client.send_goal(goal0)
             print("--------------------RESCUEING----------------------")
+
         elif self.frontier_goal != []:
             point = self.frontier_goal
             client = actionlib.SimpleActionClient('move_base',MoveBaseAction)
@@ -191,27 +202,13 @@ class Choose_Point():
             # 初始化四个目标点在 map 坐标系下的坐标,数据来源于《采集的目标点.docx》
             goal0.target_pose.pose.position.x = point[0]
             goal0.target_pose.pose.position.y = point[1]
-            # goal0.target_pose.pose.orientation.z = 0
+            goal0.target_pose.pose.orientation.z = 0.15
             goal0.target_pose.pose.orientation.w = 1
-
+            import time
             goal0.target_pose.header.frame_id = "map"
             goal0.target_pose.header.stamp = rospy.Time.now()
-            if self.flag == 1:
-                client.send_goal(goal0)
-                import os
-                path=os.path.abspath(os.path.dirname(__file__))
-                # open a txt to record the position
-                f = open(path+"/frontier_position.txt","a")
-                import time
-                time_now=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-                f.write("--------------------------------------\n")
-                f.write("Time:"+str(time_now))
-                f.write("\n")     
-                f.write(f"goal frontier point: {goal0.target_pose.pose.position.x},{goal0.target_pose.pose.position.y}\n")
-                # f.write(str(x)+","+str(y)+"\n")
-                f.write("--------------------------------------\n")
-                f.close()
-                self.flag = 0
+            
+            client.send_goal(goal0)
             print("--------------------EXPLORING----------------------")
 
 if __name__ == "__main__":
