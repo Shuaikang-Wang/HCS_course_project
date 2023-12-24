@@ -30,7 +30,8 @@ class image_converter:
       self.target_pub=rospy.Publisher("/object_detect_pose", PointStamped, queue_size=1)	#发布target的Pose信息
       self.tf_buffer = tf2_ros.Buffer()
       self.tf_listener = tf2_ros.TransformListener(self.tf_buffer)
-
+      import sys
+      self.path=sys.path[0]
      
     def visual_callback(self,data):
         # 使用cv_bridge将ROS的图像数据转换成OpenCV的图像格式
@@ -41,7 +42,7 @@ class image_converter:
 
         cv_image = cv2.cvtColor(image_input,cv2.COLOR_BGR2HSV)  #将获得的bgr图转化为hsv图，这样更利于我们在真实环境中识别物体
         # print("Size of image:", cv_image.shape) #(480,640,3)
-
+        
         # define the list of boundaries in BGR 
         boundaries = [([HUE_LOW, SATURATION_LOW, VALUE_LOW], [HUE_HIGH,SATURATION_HIGH,VALUE_HIGH])]	#识别颜色的范围值BGR
 
@@ -96,6 +97,18 @@ class image_converter:
             point_world = self.tf_buffer.transform(point_camera,"odom")
             # rospy.loginfo("Robot detecting: target position "+str(point_world)
             self.target_pub.publish(point_world)
+
+            if np.isnan(point_world.point.x)!=True and np.isnan(point_world.point.y)!=True:
+                # save figure
+                # clear the recording file
+                # f = open(self.path+"/object_positions_dict.txt","w")
+                np_image = np.asarray(image_input) #将cv_image转化为numpy数组
+                # get current time
+                import time
+                time_now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+                # save the numpy array into file
+                np.save(self.path+"/camera_record/camera"+str(time_now)+".npy",np_image)
+
 
         # 显示Opencv格式的图像
         cv2.imshow("Image window", image_input)
